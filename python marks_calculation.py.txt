@@ -1,0 +1,31 @@
+# Program to calculate total, average, highest and lowest marks
+# Written as part of Python practice
+
+marks = []
+
+num_subjects = int(input("How many subjects? "))
+
+if num_subjects <= 0:
+    print("Invalid number of subjects")
+else:
+    # Take marks from the user
+    for i in range(num_subjects):
+        mark = int(input(f"Enter mark {i + 1}: "))
+        marks.append(mark)
+
+    # Calculations
+    total = sum(marks)
+    average = total / num_subjects
+
+    # Display results
+    print("\nMarks entered:", marks)
+    print("Total marks:", total)
+    print("Average marks:", average)
+    print("Highest mark:", max(marks))
+    print("Lowest mark:", min(marks))
+
+    # Final result
+    if average >= 35:
+        print("FINAL RESULT: PASS")
+    else:
+        print("FINAL RESULT: FAIL")
